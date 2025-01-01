@@ -1,0 +1,236 @@
+
+
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar-admin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #2d3436;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.logo-admin {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-admin a {
+    display: block;
+    color: #b2bec3;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.menu-admin a:hover,
+.menu-admin a.active {
+    background: #00cec9;
+    color: #fff;
+}
+
+/* Main Content */
+.content-admin {
+    margin-left: 250px;
+    flex: 1;
+    padding: 20px;
+}
+
+
+.header-admin {
+    position: fixed;
+    top: 0;
+    left: 250px; /* Để không đè lên sidebar */
+    width: calc(100% - 250px); /* Trừ đi chiều rộng của sidebar */
+    z-index: 1000; /* Đảm bảo header luôn ở trên */
+    background: #f5f7fb;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Dashboard Overview */
+.dashboard {
+    margin-bottom: 30px;
+
+    padding-top: 80px; /* Bằng chiều cao header */
+
+}
+
+.dashboard .overview {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.card p {
+    font-size: 1.5rem;
+    color: #2d3436;
+    font-weight: bold;
+}
+
+/* Management Tables */
+.management {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 1.2rem;
+    color: #2d3436;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    text-align: left;
+    background: #f5f7fb;
+    padding: 10px;
+    color: #666;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+button.btn {
+    background: #00cec9;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background: #00b8b2;
+}
+
+button.btn.small {
+    padding: 5px 10px;
+}
+
+button.btn.danger {
+    background: #e74c3c;
+}
+
+button.btn.danger:hover {
+    background: #c0392b;
+}
+.user-detail-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .user-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .user-info p {
+    margin: 8px 0;
+  }
+  
+  .user-info p strong {
+    color: #007BFF;
+  }
+  
+  .user-section {
+    margin-bottom: 20px;
+  }
+  
+  .user-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .user-section div {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .user-section div p {
+    margin: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .user-detail-container {
+      padding: 10px;
+    }
+    
+    .user-info,
+    .user-section div {
+      padding: 10px;
+    }
+  }
+  

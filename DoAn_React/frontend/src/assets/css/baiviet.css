@@ -1,0 +1,910 @@
+/*----------------------------------------------------------------Thêm món mới ----------------------------*/
+.banner-baiviet {
+
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 40px 40px 14.6rem 40px ;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    overflow: hidden; /* Đảm bảo nội dung banner không vượt quá chiều rộng */
+}
+
+.content-1-baiviet {
+    display: flex;
+    height: auto; /* Thay đổi chiều cao thành tự động */
+    gap: 15px;
+    align-items: flex-start;
+}
+
+/* Image upload styling */
+.image-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.image-upload:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-image {
+    display: none;
+}
+
+.image-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #aaa;
+}
+#image-placeholder-image-preview{
+    width:100%;
+    height:100%
+}
+#image-preview {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Recipe info styling */
+.recipe-info {
+    flex-grow: 1;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.recipe-info h1{
+    margin-top: -5px;
+    font-size: 2.125rem;
+}
+#recipe-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+.recipe-info p{
+    max-width:730px;
+    height: 100px;
+    border: 1px solid #ddd;
+    color:#555;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+.recipe-info .edit-detele .save{
+    border: rgb(255, 151, 51) solid 2px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    cursor:pointer;
+    color: rgb(255, 151, 51);
+    width: 6rem;
+    height:3rem;
+}
+.recipe-info .edit-detele .save2{
+    border: rgb(255, 151, 51) solid 2px;
+    background-color: rgb(255, 151, 51);
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    cursor:pointer;
+    color: white;
+    width: 6rem;
+    height:3rem;
+}
+#huysave{
+    color:white
+}
+.recipe-info .edit-detele :hover,.recipe-info .save :hover{
+    background-color: rgb(255, 151, 51);
+    color: #ffffff;
+}
+.recipe-info .edit-detele  .save2 :hover{
+    background-color: rgb(209, 121, 32);
+    color: rgb(255, 151, 51);
+}
+.edit-detele{
+    display:flex;
+    gap:1rem;
+}
+/* Recipe form styling */
+.recipe-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.recipe-form h2 {
+    margin-bottom: 10px;
+}
+
+.ingredients-section, .steps-section {
+    margin-bottom: 20px;
+}
+
+.ingredient-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-ingredient, .add-step, .submit-recipe {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-ingredient, .add-step {
+    background-color: #007bff;
+    margin-bottom: 10px;
+}
+
+.add-ingredient:hover, .add-step:hover, .submit-recipe:hover {
+    background-color: #0056b3;
+}
+
+.submit-recipe {
+    background-color: #28a745;
+    margin-top: 20px;
+}
+.recipe-info .avartar  a{
+    display:flex;
+    color: #555;
+    gap:5px
+}
+.recipe-info .avartar .avt{
+    display: flex;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 3rem;
+    background-color: peru;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.recipe-info .avartar .name{
+    display:flex;
+    align-items: center;
+}
+.recipe-info .avartar a .avt img{    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content-2-baiviet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+   
+    width: 30%;
+    height: 100%;
+    gap: 7.5rem;
+   
+}
+.content-2-baiviet.item {
+    height: 100%;
+}
+.nguyenlieu {
+    display: grid;
+    width: 30%;
+    gap: 0.5rem;
+    max-height: 100%; /* Giới hạn chiều cao phần nguyên liệu */
+    overflow: hidden; /* Ẩn phần bị tràn nếu có */
+}
+
+
+/* Ẩn thanh trượt trên tất cả trình duyệt */
+.cacbuoc::-webkit-scrollbar {
+    display: none; /* Ẩn thanh trượt trên Chrome, Safari */
+  }
+  
+.ration {
+    display: flex;
+    
+    gap: 1rem;
+}
+
+.nguyenlieu .ration input {
+    width: 50%;
+}
+
+.nguyenlieu .ration .ration-title {
+    display: flex;
+    align-items: center;
+}
+
+.nguyenlieu .ration .ration-title span {
+    font-weight: bolder;
+}
+
+.nguyenlieu .ingredients {
+    
+    justify-content: space-between;
+}
+
+.nguyenlieu .ingredients {
+   
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nguyenlieu .ingredients .textarea {
+    min-height: 10px;
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 1.5;
+    padding: 8px 8px 8px 0px;
+    border-bottom:  #555 solid 0.1px ;
+    border-bottom-style: dotted;
+}
+
+/* Tùy chọn để làm đẹp hơn */
+.nguyenlieu .ingredient-icon {
+    margin-left: 10px;
+}
+
+.nguyenlieu .ingredients {
+   
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+/* Sửa selector để khi có lớp 'show' thì sẽ hiển thị */
+.dropdown-menu.show {
+    display: block;
+}
+
+.nguyenlieu .addingredient {
+    
+    justify-content: center;
+}
+
+.nguyenlieu .addingredient span {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.cacbuoc {
+    width: 70%;
+    max-height: 600px; /* Giới hạn chiều cao tối đa */
+    overflow-y: auto; /* Cho phép thanh cuộn khi cần */
+    transition: all 0.3s ease; /* Hiệu ứng mượt khi thay đổi kích thước */
+}
+
+
+.prepare-container {
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.prepare {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+}
+
+.prepare-text {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.prepare-text .number {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+}
+
+.prepare-text .textarea {
+    width: 90%;
+}
+
+.prepare-text .textarea textarea {
+    min-height: 25px;
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 1.5;
+    padding: 8px;
+}
+
+.prepare-text-icon {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+
+.prepare-image {
+    width: 100%;
+    padding-left: 2.6rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.prepare-image .image-upload-container {
+    width: 160px;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-size: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.prepare-image .image-upload-container:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.prepare-image .image-preview {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.prepare-image .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.prepare-image .image-upload-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.prepare-image .image-upload-label .fa-camera,
+.prepare-image .image-upload-label .fa-trash-can {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.prepare-image .image-upload-label .fa-camera:hover,
+.prepare-image .image-upload-label .fa-trash-can:hover {
+    color: #ff5050;
+}
+
+.prepare-image .image-upload-label.no-trash .fa-trash-can {
+    display: none;
+}
+
+
+
+.addingredient-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.addingredient-2 span {
+    font-weight: bold;
+    cursor: pointer;
+}
+/*----------------------------------------------------------------------------------------------*/
+hr{
+    
+}
+
+.column-baiviet {
+    width: 100%;
+    display: flex;
+    
+}
+.content-3 h1{
+    font-size: 2rem;
+}
+.column-baiviet .column-item-baiviet {
+    display:flex;
+    gap:1rem;
+    padding: 20px;
+    width: 70%;
+
+}
+
+.column-item-baiviet :last-child {
+    border-bottom: none;
+}
+
+
+.column-item-baiviet  .content-1-baiviet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.column-item-baiviet  .content-1-baiviet .avt-3-baiviet {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.column-item-baiviet .content-1-baiviet span {
+    color:#333;
+}
+
+.column-item-baiviet .content-1-baiviet .avt-3-baiviet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.column-item-baiviet .content-2-baiviet h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.column-item-baiviet .content-2-baiviet p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.column-item-baiviet .photo{
+    display:flex;
+    color:black;
+    gap:20px;
+}
+.column-item-baiviet .icon{
+    width:100%;
+
+}
+.column-item-baiviet.photo img {
+    width: 130px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content-4-baiviet-1{
+    display:flex;
+    justify-content: space-between;
+
+}
+.content-4-baiviet-2 {
+    background-color: #f9f9f9; /* Nền nhạt */
+    
+    border-radius: 8px; /* Bo góc */
+    margin: 0 auto; /* Căn giữa */
+}
+
+.content-4-baiviet-2 .ul-baiviet {
+    list-style-type: none; /* Loại bỏ chấm đầu dòng */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Sử dụng flexbox */
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng nếu không đủ chỗ */
+    justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.content-4-baiviet-2 .li-baiviet {
+    flex: 1 1 calc(25% - 20px); /* Chiều rộng mỗi phần tử chiếm 25% trừ đi khoảng cách */
+    max-width: calc(25% - 20px); /* Đảm bảo không vượt quá chiều rộng 25% */
+    box-sizing: border-box; /* Tính cả padding và viền vào kích thước */
+    text-align: center; /* Căn giữa nội dung */
+    padding: 10px; /* Thêm khoảng cách bên trong khung */
+    border: 2px solid #ddd; /* Viền khung nhạt */
+    border-radius: 8px; /* Bo góc cho viền */
+    background-color: #fff; /* Nền trắng bên trong */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    transition: all 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.content-4-baiviet-2 .li-baiviet:hover {
+    border-color: #007bff; /* Đổi màu viền khi hover */
+    box-shadow: 0 6px 10px rgba(0, 123, 255, 0.2); /* Tăng bóng khi hover */
+    transform: translateY(-5px); /* Đẩy khung lên khi hover */
+}
+.content-4-baiviet-2 .ul-baiviet .khung{
+    height:250px;
+}
+.content-4-baiviet-2 img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
+    height: 100%; /* Giữ tỉ lệ */
+    border-radius: 8px; /* Bo góc ảnh */
+    display:block;
+    object-fit: cover;
+}
+
+.content-4-baiviet-2 p {
+    margin-top: 10px;
+    font-size: 14px; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+    font-weight: bold;
+}
+
+.comment-section {
+    margin-top: 20px;
+  }
+  
+  .add-comment textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .add-comment button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .comment-avatar {
+    margin-right: 10px;
+  }
+  
+  .comment-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .comment-content {
+    flex-grow: 1;
+  }
+  
+  .comment-actions {
+    margin-left: 10px;
+  }
+  
+  .comment-actions button {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+@media screen and (max-width: 1350px) {
+    .content-2 {
+        flex-direction: column; /* Đặt các phần tử xếp dọc */
+        gap: 3rem; /* Tăng khoảng cách giữa các phần tử */
+    }
+
+    .nguyenlieu, .cacbuoc {
+        width: 100%; /* Mỗi phần tử chiếm toàn bộ chiều rộng */
+        max-height: none; /* Bỏ giới hạn chiều cao nếu cần */
+        overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung tràn */
+    }
+
+    .prepare-container {
+        gap: 2rem; /* Giảm khoảng cách giữa các bước */
+    }
+
+    .prepare-text .number {
+        width: 1.8rem; /* Giảm kích thước số thứ tự */
+        height: 1.8rem;
+        font-size: 14px;
+    }
+
+    .prepare-text .textarea textarea {
+        font-size: 14px; /* Giảm kích thước chữ */
+        padding: 6px; /* Giảm padding */
+    }
+
+    .prepare-image .image-upload-container {
+        width: 140px; /* Thu nhỏ ảnh */
+        height: 112px;
+    }
+
+    .prepare-image .image-upload-label .fa-camera,
+    .prepare-image .image-upload-label .fa-trash-can {
+        font-size: 20px; /* Giảm kích thước biểu tượng */
+    }
+}
+
+
+
+
+/* Đối với màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .content-1 {
+        flex-direction: column; /* Chuyển sang cột cho màn hình nhỏ */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    .image-upload {
+        width: 100%; /* Chiều rộng 100% cho màn hình nhỏ */
+        height: 200px; /* Chiều cao cố định cho hình ảnh */
+    }
+
+    .recipe-info {
+        padding-left: 0; /* Bỏ padding bên trái */
+        width: 100%; /* Chiều rộng 100% */
+    }
+
+    .content-2 {
+        flex-direction: column; /* Chuyển sang cột cho màn hình nhỏ */
+        width: 100%; /* Chiều rộng 100% */
+    }
+
+    .nguyenlieu, .cacbuoc {
+        width: 100%; /* Chiều rộng 100% */
+        max-height: none; /* Bỏ giới hạn chiều cao */
+    }
+
+    .addingredient, .addingredient-2 {
+        justify-content: center; /* Căn giữa */
+    }
+
+
+    .cacbuoc {
+        max-height: none; /* Bỏ giới hạn chiều cao */
+    }
+
+    .prepare-text .textarea textarea {
+        font-size: 12px; /* Giảm kích thước chữ thêm nữa */
+    }
+
+    .prepare-image .image-upload-container {
+        width: 120px; /* Thu nhỏ hơn nữa */
+        height: 96px;
+    }
+}@media screen and (max-width: 565px) {
+    /* Bố cục chính */
+    .content-2 {
+        flex-direction: column; /* Xếp dọc các phần */
+        gap: 2rem; /* Tăng khoảng cách giữa các phần */
+    }
+
+    /* Phần nguyên liệu */
+    .nguyenlieu {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        padding: 0 1rem; /* Thêm khoảng trống hai bên */
+    }
+
+    .nguyenlieu .ingredients .textarea {
+        font-size: 12px; /* Giảm kích thước chữ */
+    }
+
+    .nguyenlieu .ration input {
+        font-size: 12px; /* Chữ nhỏ hơn */
+        padding: 5px; /* Giảm padding */
+    }
+
+    /* Phần các bước */
+    .cacbuoc {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        max-height: none; /* Không giới hạn chiều cao */
+        overflow-y: visible; /* Hiển thị đầy đủ nội dung */
+        padding: 0 1rem; /* Thêm khoảng trống hai bên */
+    }
+
+    .prepare-container {
+        gap: 1.5rem; /* Giảm khoảng cách giữa các bước */
+    }
+
+    .prepare-text .number {
+        width: 1.5rem; /* Nhỏ hơn để tiết kiệm không gian */
+        height: 1.5rem;
+        font-size: 10px;
+    }
+
+    .prepare-text .textarea textarea {
+        font-size: 12px; /* Chữ nhỏ gọn hơn */
+        padding: 5px; /* Giảm padding */
+    }
+
+    .prepare-image {
+        padding-left: 1.9rem; /* Loại bỏ padding bên trái */
+        gap: 0.5rem; /* Giảm khoảng cách giữa các ảnh */
+    }
+
+    .prepare-image .image-upload-container {
+        width: 80px; /* Nhỏ hơn cho phù hợp */
+        height: 64px;
+    }
+
+    .prepare-image .image-upload-label .fa-camera,
+    .prepare-image .image-upload-label .fa-trash-can {
+        font-size: 14px; /* Biểu tượng nhỏ hơn */
+    }
+
+    /* Nút thêm bước */
+    .addingredient-2 span {
+        font-size: 14px; /* Chữ nhỏ hơn */
+    }
+}
+
+@media screen and (max-width: 422px) {
+    /* Bố cục chính */
+    .content-2 {
+        flex-direction: column; /* Xếp dọc */
+        gap: 1.5rem; /* Giảm khoảng cách */
+        padding: 0 0.5rem; /* Thêm khoảng trống hai bên */
+    }
+
+    /* Phần nguyên liệu */
+    .nguyenlieu {
+        width: 100%; /* Toàn chiều rộng */
+    }
+
+    .nguyenlieu .ration input,
+    .nguyenlieu .ingredients .textarea {
+        font-size: 10px; /* Chữ nhỏ hơn */
+        padding: 4px; /* Padding nhỏ */
+    }
+
+    /* Phần các bước */
+    .cacbuoc {
+        width: 100%; /* Toàn chiều rộng */
+        padding: 0; /* Loại bỏ padding */
+        max-height: none; /* Không giới hạn chiều cao */
+        overflow-y: visible; /* Hiển thị đầy đủ nội dung */
+    }
+
+    .prepare-container {
+        gap: 1rem; /* Giảm khoảng cách giữa các bước */
+    }
+
+    .prepare-text {
+        gap: 8px; /* Thu hẹp khoảng cách */
+    }
+
+    .prepare-text .number {
+        width: 1.2rem; /* Nhỏ hơn */
+        height: 1.2rem;
+        font-size: 8px; /* Chữ số nhỏ hơn */
+    }
+
+    .prepare-text .textarea textarea {
+        font-size: 10px; /* Chữ nhỏ */
+        padding: 4px; /* Giảm padding */
+    }
+
+    .prepare-image {
+        padding-left: 1.5rem;
+        gap: 0.5rem; /* Khoảng cách nhỏ hơn giữa các ảnh */
+    }
+
+    .prepare-image .image-upload-container {
+        width: 50px;
+        height: 48px;
+    }
+
+    .prepare-image .image-upload-label .fa-camera,
+    .prepare-image .image-upload-label .fa-trash-can {
+        font-size: 12px; /* Biểu tượng nhỏ hơn */
+    }
+
+    /* Nút thêm bước */
+    .addingredient-2 span {
+        font-size: 12px; /* Chữ nhỏ hơn */
+    }
+}
+.comments-section {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .comment-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comment-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .comments-list {
+    margin-top: 20px;
+  }
+  
+  .comments-list .comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  

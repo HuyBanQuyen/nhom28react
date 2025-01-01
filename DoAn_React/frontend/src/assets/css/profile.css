@@ -1,0 +1,1088 @@
+
+.banner-canhan {
+
+    justify-content: center;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 40px 40px 14.6rem 40px ;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    overflow: hidden; /* Đảm bảo nội dung banner không vượt quá chiều rộng */
+}
+
+.banner-canhan .profile{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    
+}
+.banner-canhan .profile .profile-user{
+    padding:20px;
+    width:70%;
+    height:100%;
+}
+.banner-canhan .profile .profile-user .item-1{
+    gap: .5rem;
+    padding-bottom: 10px;
+    display:flex;
+}
+.banner-canhan .profile .profile-user .item-1 .avt{
+    width: 6rem;
+    height:96px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.banner-canhan .profile .profile-user .item-1 .text{
+    align-content: center;
+    color: #555;
+    width: 20rem;
+    
+    
+    
+}
+.banner-canhan .profile .profile-user .item-1 .text .Name{
+    font-weight: bold;
+}
+.banner-canhan .profile .profile-user .item-1 .avt img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.profile-user .item-2{
+    gap: 50px;
+    width:100%;
+    padding-bottom: 20px;
+    display:flex;
+}
+.profile-user .item-2 span{
+    color: #555;
+    cursor: pointer;
+}
+.profile-user .item-2 .friend .number ,.profile-user .item-2 .follow .number{
+    color:black;
+    font-weight: bold;
+}
+.profile-user .item-3{
+    width:100%;
+    height:3rem;
+    border: 2px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.profile-user .item-3:hover{
+    border: 2px solid #e65500;
+    
+}
+
+.profile-user .item-3 .text{
+    display: flex;
+    color:#555;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;    
+}
+.profile-user .item-3 .text a:hover{
+    color:#e65500;
+}
+.profile-user .item-3 .text a{
+    text-decoration: none;
+    color:#555;
+}
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.menu-header span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.menu-header .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-header .search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.menu-header .search-bar button {
+    padding: 5px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-header .search-bar button:hover {
+    background-color: #333;
+}
+
+
+.banner-canhan .title{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.title  .h1{
+    width:70%;
+    
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.column .column-item {
+    padding: 20px;
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column-item ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.column-item ul li:last-child {
+    border-bottom: none;
+}
+
+.column-item ul li .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:1rem
+}
+
+.column-item ul li .content .content-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.column-item ul li .content .content-1 .avt-3 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.column-item ul li .content .content-1 span {
+    color:#333;
+}
+
+.column-item ul li .content .content-1 .avt-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.column-item ul li .content .content-2 h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.column-item ul li .content .content-2 p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.column-item ul li .content .content-3 ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column-item ul li .content .content-3 ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+}
+.column-item ul li .photo{
+    display:flex;
+    color:black;
+    gap:20px;
+}
+.column-item ul li .icon{
+    width:100%;
+
+}
+.column-item ul li .photo img {
+    width: 130px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+@media  screen and (max-width: 1500px){
+    .feedback-section {
+        display: none; /* Ẩn feedback khi dưới 1500px */
+    }
+
+    .recipe-card {
+        flex-direction: column; /* Chuyển recipe-card thành cột */
+        align-items: flex-start;
+    }
+
+    .recipe-image {
+        width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+        margin-bottom: 15px; /* Khoảng cách giữa ảnh và nội dung */
+    }
+
+    .recipe-image img {
+        object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    }
+
+    .recipe-info {
+        width: 100%; /* Nội dung đầy đủ chiều rộng */
+        padding: 0;
+    }
+
+    .recipe-info h4 {
+        font-size: 1.3rem; /* Điều chỉnh tiêu đề nhỏ gọn hơn */
+    }
+
+    .recipe-info p {
+        font-size: 1rem; /* Giữ nội dung rõ ràng */
+        line-height: 1.5;
+    }
+}
+;
+    
+
+@media screen and (max-width: 1024px) {
+    .profile-user, .menu-header, .column .column-item {
+        width: 85%;
+    }
+
+    .menu-header span {
+        font-size: 0.9rem;
+    }
+
+    .menu-header .search-bar input {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .profile-user {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .menu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-header .search-bar {
+        width: 100%;
+    }
+
+    .menu-header .search-bar input {
+        width: 100%;
+    }
+
+    .column .column-item {
+        width: 90%;
+    }
+
+    .column-item ul li .photo img {
+        width: 100px;
+        height: 140px;
+    }
+}
+
+/* Media Queries cho màn hình max-width: 480px */
+@media screen and (max-width: 480px) {
+    /* Bố cục profile */
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .profile-user {
+        width: 90%; 
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* Hình ảnh avatar và thông tin */
+    .profile-user .item-1 {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+    .profile-user .item-1 .avt {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-user .item-1 .text {
+        width: 100%;
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+    }
+
+    /* Menu header */
+    .menu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .menu-header .search-bar {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+
+    .menu-header .search-bar input {
+        width: 75%;
+        padding: 8px;
+    }
+
+    .menu-header .search-bar button {
+        padding: 8px 12px;
+    }
+
+    /* Column */
+    .column .column-item {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Các mục trong column-item */
+    .column-item ul li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .column-item ul li .content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .column-item ul li .content .content-1 {
+        gap: 8px;
+        align-items: center;
+    }
+
+    .column-item ul li .content .content-2 h1 {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .column-item ul li .content .content-2 p {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    /* Điều chỉnh hình ảnh */
+    .column-item ul li .photo {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .column-item ul li .photo img {
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Chỉnh lại các nút và thông tin */
+    .column-item ul li .content .content-3 ul li {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .column-item ul li .icon {
+        width: 100%;
+    }
+
+    /* Cải thiện cách sắp xếp phần nội dung */
+    .column-item ul li .content .content-1 span {
+        font-size: 0.9rem;
+        color: #333;
+    }
+}
+
+/*-----------------------------------------------------Suaprofile--------------------------------------------*/
+.profile-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    gap:0.5rem;
+    right: -px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+.edit-buttons button{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-buttons label{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width:25%;
+    display:grid;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-buttons button:hover ,.edit-buttons label:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-info label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-info input,
+.profile-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profile-info textarea {
+    resize: vertical;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.update-btn, .cancel-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+}
+
+.update-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+}
+
+.cancel-btn:hover {
+    background-color: #da190b;
+}
+/* Styles for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .edit-buttons {
+        bottom: 5px;
+    }
+
+    .profile-info input,
+    .profile-info textarea {
+        font-size: 14px;
+    }
+}
+
+/* Styles for smaller devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .profile-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .profile-header {
+        gap: 10px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .edit-buttons button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .profile-info label {
+        font-size: 14px;
+    }
+
+    .profile-info input,
+    .profile-info textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .update-btn, .cancel-btn {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+/*--------------------------------------------------Liên Hệ--------------------------------------------*/
+.feedback-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feedback-container p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-color:#e65500;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.feedback-form .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #e65500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feedback-form .submit-btn:hover {
+    background-color: #e65500;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 480px) {
+    .feedback-container {
+        padding: 15px;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+        font-size: 12px;
+    }
+
+    .feedback-form .submit-btn {
+        font-size: 14px;
+    }
+}
+/*--------------------------------------------------------------Tất Cả-------------------------------*/
+/* General layout */
+.page-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    font-family: 'Arial', sans-serif;
+    flex-wrap: wrap;
+}
+
+/* Left Section */
+.content-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff5722;
+    padding-bottom: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff5722;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e64a19;
+}
+
+/* Recipe Card */
+.recipe-card {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 100%; /* Make it full width when feedback section is hidden */
+    height: auto; /* Adjust height for better alignment */
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+    flex: 1;
+    max-width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recipe-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: bold;
+}
+
+.recipe-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Draft-specific styles */
+.draft-tag {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #ff5722;
+    background-color: #fff3e0;
+    border-radius: 5px;
+}
+
+/* Recipe Author */
+.recipe-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipe-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.recipe-author span {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Right Section */
+.feedback-section {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.85rem;
+    max-width: 300px; /* Thu nhỏ chiều rộng */
+    max-height: 270px; /* Giảm chiều cao */
+    overflow: hidden;
+}
+
+.feedback-section h3 {
+    font-size: 0.9rem; /* Giảm kích thước tiêu đề */
+    color: #222;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ff5722; /* Giảm độ dày đường kẻ */
+    padding-bottom: 5px;
+}
+
+.feedback-section textarea {
+    width: 100%;
+    height: 70px; /* Thu nhỏ chiều cao */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 0.85rem; /* Giảm kích thước font */
+    margin-bottom: 8px;
+    resize: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section textarea:focus {
+    border-color: #ff5722;
+    outline: none;
+    background-color: #fff;
+}
+
+.submit-feedback {
+    display: block;
+    width: 100%;
+    padding: 8px; /* Giảm kích thước nút */
+    background-color: #ff5722;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.85rem; /* Giảm kích thước font */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-feedback:hover {
+    background-color: #e64a19;
+}
+
+.feedback-note {
+    margin-top: 5px; /* Thu nhỏ khoảng cách */
+    font-size: 0.5rem; /* Giảm kích thước chữ */
+    color: #666;
+    line-height: 1.4;
+}
+
+.feedback-note a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.feedback-note a:hover {
+    text-decoration: underline;
+}
+.no-results{
+    padding-top: 4rem;
+    width:100%;
+    justify-content: center;
+    display:grid;
+}
+.img{
+    width:160px;
+    height:200px;
+}
+.no-results-img img{
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
+}
+.no-results-img{
+    width: 100%;  
+    height: 100%; 
+    display:flex;
+    justify-content: center;
+    
+}
+.no-results-text{
+    justify-content: center;
+    display:grid;
+    align-items: center;
+    width:100%;
+}
+.no-results-text p{
+    font-size: 800; 
+    font-weight:bolder;
+}
+.no-results-text-p1{
+    display:flex;
+    width:100%;
+    justify-content: center;
+}
+/* Media Query for screens smaller than 1500px */
+@media screen and (max-width: 1500px) {
+    /* Hide feedback-section */
+    .feedback-section {
+        display: none;
+    }
+
+    /* Recipe Card Adjustments */
+    .recipe-card {
+        width: 100%; /* Dãn ra chiếm toàn bộ chiều ngang */
+        height: 170px; /* Giữ nguyên chiều cao */
+        flex-direction: row; /* Giữ các thành phần xếp hàng ngang */
+    }
+
+    .recipe-image {
+        flex: 1;
+        max-width: 150px; /* Giữ kích thước như ban đầu */
+        height: 150px;
+    }
+
+    .recipe-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    }
+
+    .recipe-info {
+        flex: 2;
+        display: flex;
+        flex-direction: column; /* Giữ các nội dung xếp dọc */
+        justify-content: space-between; /* Phân bổ không gian như ban đầu */
+        padding: 0 15px; /* Giữ khoảng cách như ban đầu */
+    }
+
+    .recipe-info h4 {
+        font-size: 1.2rem; /* Giữ nguyên kích thước tiêu đề */
+    }
+
+    .recipe-info p {
+        font-size: 0.9rem; /* Giữ kích thước chữ mô tả */
+        color: #666;
+    }
+
+    .recipe-author {
+        display: flex; /* Giữ bố cục ngang cho tác giả */
+        align-items: center;
+        gap: 10px; /* Khoảng cách giữa ảnh và tên */
+    }
+
+    .recipe-author img {
+        width: 40px; /* Kích thước avatar không đổi */
+        height: 40px;
+        border-radius: 50%; /* Giữ hình tròn cho ảnh */
+        object-fit: cover;
+        border: 2px solid #ddd;
+    }
+
+    .recipe-author span {
+        font-size: 0.9rem; /* Giữ kích thước tên tác giả */
+        color: #333;
+        font-weight: bold;
+    }
+}
+
+
+/* Media Query for smaller screens (e.g., tablets or mobile) */
+@media screen and (max-width: 768px) {
+    .recipe-card {
+        height: auto; /* Để nội dung tự động dãn chiều cao */
+    }
+
+    .recipe-info {
+        padding: 5px; /* Thu gọn khoảng cách */
+    }
+
+    .recipe-info h4 {
+        font-size: 0.9rem; /* Giảm thêm kích thước tiêu đề */
+    }
+
+    .recipe-info p {
+        font-size: 0.8rem; /* Giảm kích thước chữ mô tả */
+    }
+
+    .recipe-author img {
+        width: 30px; /* Giảm kích thước avatar */
+        height: 30px;
+    }
+
+    .recipe-author span {
+        font-size: 0.8rem; /* Giảm kích thước tên tác giả */
+    }
+}
+

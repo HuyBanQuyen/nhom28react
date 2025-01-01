@@ -1,0 +1,132 @@
+main.content-follow {
+    flex-grow: 1;
+    padding: 0 20px 20px 20px;
+    background-color: #f7f7f7;
+    overflow-y: auto;
+    height: 100%; /* Đảm bảo main chiếm toàn bộ chiều cao */
+}
+
+.column .column-item {
+    padding: 20px;
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column-item-follow ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column-item-follow ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.column-item-follow ul li:last-child {
+    border-bottom: none;
+}
+
+.column-item ul li .content-follow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:1rem
+}
+
+
+
+.column-item-follow ul li .content-follow .content-1-follow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.column-item-follow ul li .content-follow .content-1-follow .avt-3 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.column-item-follow ul li .content-follow .content-1-follow  .span {
+    display:grid
+}
+.column-item-follow ul li .content-follow .content-1-follow  .span .name{
+    font-weight: bold;
+}
+.column .column-item-follow {
+    padding: 10px;
+    width: 70%;
+    border-radius: 8px;
+    
+}
+.column-item-follow ul li .content-follow .content-1-follow span {
+    color:#333;
+}
+
+.column-item-follow ul li .content-follow .content-1-follow .avt-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.column-item-follow ul li .content-follow .content-2 h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.column-item-follow ul li .content-follow .content-2 p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.column-item-follow ul li .content-follow .content-3 ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column-item-follow ul li .content-follow .content-3 ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+}
+.column-item-follow ul li .photo-follow{
+    width:20%;
+    height:40px;
+   
+    display:flex;
+    justify-content: center;
+    color:black;
+}
+.column-item-follow ul li .photo-follow .button{
+    width:100%;
+    height:100%;
+    background-color: #000000;
+    color: #ddd;
+}
+.column-item-follow ul li .photo-follow  :hover{
+    width:100%;
+    height:100%;
+    background-color: #dcd7d7;
+    color: #161515;
+}
+.column-item-follow ul li .icon{
+    width:100%;
+
+}
+.column-item-follow ul li .photo img {
+    width: 130px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}

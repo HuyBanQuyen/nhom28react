@@ -1,0 +1,970 @@
+* {
+    box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến kích thước */
+}
+
+
+/* General body settings */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; /* Ngăn thanh cuộn ngang */
+}
+.main{
+    padding-top: 10px;
+}
+
+/* Container takes full width and height */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%; 
+    flex-grow: 1;/* Đảm bảo container chiếm toàn bộ chiều cao của trang */
+}
+.container .top-bar .search {
+    width: 90%;
+    position: relative; /* Để có thể sử dụng absolute cho nút */
+}
+
+.search input {
+    width: 100%;
+    padding: 10px 20px;
+    padding-right: 40px; /* Để tạo không gian cho icon ở cuối */
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-btn i {
+    font-size: 20px;
+    color: #666; /* Màu cho icon */
+}
+
+
+
+.buttons-login{
+    
+}
+
+
+
+/* Sidebar styles */
+.sidebar {
+    width: 320px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s, background-color 0.3s;
+    overflow: hidden;
+    position: sticky; /* Hoặc fixed nếu bạn muốn sidebar luôn cố định */
+    top: 0;
+    height: 100vh; /* Đảm bảo sidebar chiếm toàn bộ chiều cao */
+    overflow-y: auto; /* Thêm cuộn nếu cần */
+
+    
+}
+
+/* Sidebar when collapsed */
+.sidebar.collapsed {
+    width: 100px;
+}
+
+/* Hide unnecessary elements when sidebar is collapsed */
+.sidebar.collapsed .logo .text,
+.sidebar.collapsed .menu .text,
+.sidebar.collapsed p {
+    display: none;
+}
+
+/* Logo inside sidebar */
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo .icon {
+    font-size: 24px;
+    color: #ff6600;
+}
+
+.sidebar .logo .text {
+    font-size: 24px;
+    color: #ff6600;
+    transition: opacity 0.3s;
+}
+
+/* Menu inside sidebar */
+.sidebar .menu {
+    margin-top: 20px;
+}
+
+.sidebar .menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu li {
+    
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.sidebar .menu li:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+.li-2{
+    margin-top: 10px;
+}
+.submenu-toggle .submenu ul .li-2:hover{
+    background-color:#ccc;
+}
+
+.sidebar .menu .icon {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.sidebar .menu .text {
+    font-size: 20px;
+    color:#555;
+    font-weight: bold;
+    text-decoration: none
+}
+.button{
+  border: none;
+  color: #555;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  background-color:#f9f8f8;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+.sidebar .menu p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #555;
+}
+
+
+/* Main content styles */
+main.content {
+    flex-grow: 1;
+    padding: 0 20px 20px 20px;
+    background-color: #f7f7f7;
+    overflow-y: auto;
+    height: 100%; /* Đảm bảo main chiếm toàn bộ chiều cao */
+}
+
+/* Top bar styles */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    background: linear-gradient(90deg, #f8f8f8, #ffffff);
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+    position: sticky; /* Giữ nguyên */
+    top: 0; /* Đặt top là 0 */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+    margin: 0; /* Đảm bảo không có margin */
+}
+
+.top-bar input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.top-bar input[type="text"]:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.4);
+    outline: none;
+}
+.buttons{
+    width:200px;
+}
+.buttons-2{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+#avartar {
+    background-color:peru;
+    display:grid;
+    justify-content: center;
+    color:#fff;
+    width:40px;
+    border-radius: 50%;
+    position: relative; /* Để dropdown có thể được định vị tương đối */
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột qua */
+}
+.avt{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    display:flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+.avt img {
+    width: 100%; /* Chiều rộng hình ảnh vừa với thẻ cha */
+    height: 100%; /* Chiều cao hình ảnh vừa với thẻ cha */
+    object-fit: cover; /* Giữ tỉ lệ và cắt hình ảnh nếu cần */
+    object-position: center; /* Đặt vị trí trung tâm cho ảnh */
+}
+.avartar-2{
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 5rem;   
+    padding: 10px 15px; /* Padding cho từng mục */
+    cursor: pointer;
+}
+.avt-2{
+    display:flex;
+    height:3rem;
+    overflow: hidden;
+    border-radius: 50%;
+    width:3rem;
+    background-color: peru;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.avt-2 img{
+    width: 100%; /* Chiều rộng hình ảnh vừa với thẻ cha */
+    height: 100%; /* Chiều cao hình ảnh vừa với thẻ cha */
+    object-fit: cover; /* Giữ tỉ lệ và cắt hình ảnh nếu cần */
+    object-position: center; /* Đặt vị trí trung tâm cho ảnh */
+}
+.avartar-2-text{
+    color:#555;
+    height:3rem;
+}
+.dropdown-content {
+    /* Ẩn menu dropdown ban đầu */
+    display:none;
+    margin-top: 50px;
+    margin-left: -110px;
+    border-radius: 1rem;
+    position: absolute; /* Định vị tuyệt đối */
+    background-color: #fff; /* Màu nền của menu */
+    min-width: 280px; /* Độ rộng tối thiểu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Bóng đổ cho menu */
+    z-index: 1; /* Đảm bảo menu nằm trên các phần tử khác */
+}
+.dropdown-content.show {
+    display: block; /* Hiển thị khi có class 'show' */
+}
+.dropdown-content ul {
+    display: grid;
+    border-top: 0 solid #000000;
+    grid-gap: 10px;
+    list-style: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ padding */
+    margin: 0; /* Bỏ margin */
+}
+.dropdown-content-end {
+    color:#555;
+    font-size: 18px;
+    display:flex;
+    padding: 10px 20px; /* Padding cho từng mục */
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột qua */
+    align-items: center;
+    width:100%;
+    height: 5rem;
+    border-top: 1px solid #555;
+}
+.dropdown-content-end:hover{
+    color:#000000;
+    font-weight: bold;
+}
+.dropdown-content li  {
+    color:#555;
+    font-size: 18px;
+    display:flex;
+    padding: 10px 20px; /* Padding cho từng mục */
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột qua */
+}
+.dropdown-content li a{
+    text-decoration: none;
+    color:#555;
+}
+.dropdown-content li a:hover{
+    color:#000000;
+}
+.dropdown-content li:hover {
+    background-color: #f1f1f1; /* Màu nền khi hover */
+    color:#000000;
+}
+.dropdown-content li i,.dropdown-content-end-icon{
+  
+    margin-right: 10px;
+}
+
+/* Button styles */
+.buttons .note {
+    width:150px;
+    display:flex;
+    margin-left: 10px;
+    padding: 8px 15px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.note .icon{
+    margin-right: 2%;
+}
+.buttons .note :hover,#avartar:hover {
+    background-color: #e65500;
+    transform: translateY(-1px);
+}
+
+.buttons .note, #avartar:active {
+    transform: translateY(1px);
+}
+
+
+
+/* Vùng chứa nút đăng nhập */
+.buttons-login {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Đảm bảo vùng chứa chiếm toàn bộ chiều cao nếu cần */
+  }
+  
+  /* Nút đăng nhập */
+  .buttons-login button {
+    background-color: peru; /* Màu xanh dương */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttons-login button:hover {
+    background-color: #ff6600; /* Màu cam khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Tăng bóng khi hover */
+  }
+  
+  .buttons-login button:active {
+    background-color: #cc5200; /* Màu cam đậm khi nhấn */
+    transform: scale(0.95); /* Co lại nhẹ khi nhấn */
+  }
+  
+
+
+
+
+/*--------------------------------------Banner styles-----------------------------------------/*
+/* Banner styles */
+.banner {
+    display:grid;
+    justify-content: center;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 40px;
+    color: #fff;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    overflow: hidden; /* Đảm bảo nội dung banner không vượt quá chiều rộng */
+}
+
+.banner-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner .banner-text .list {
+    display: flex;
+    transition: transform 0.5s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+.item {
+    min-width: 100%; /* Mỗi item chiếm toàn bộ chiều rộng */
+}
+.banner-text .list .item-active{
+    overflow: hidden;
+}
+.item img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng */
+    border-radius: 8px; /* Bo góc nhẹ */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+.banner .banner-text {
+    max-width: 1350px; /* Giữ nguyên kích thước tối đa */
+    margin-bottom: 20px;
+    height: 450px; /* Giữ nguyên chiều cao */
+    position: relative; /* Để có thể sử dụng absolute cho các nút và dots */
+    overflow: hidden; /* Đảm bảo không có nội dung nào vượt ra ngoài */
+}
+
+.item {
+    min-width: 100%; /* Mỗi item chiếm toàn bộ chiều rộng */
+}
+
+.banner .banner-text .button {
+    position: absolute;
+    top: 50%; /* Đặt nút ở giữa chiều cao */
+    left: 0;
+    right: 0;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%); /* Đưa nút lên giữa */
+    z-index: 10; /* Đảm bảo nút nằm trên ảnh */
+}
+
+.button button {
+    background-color: rgba(255, 102, 0, 0.7); /* Nền trong suốt */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Tăng kích thước nút */
+    height: 40px; /* Tăng kích thước nút */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button button :hover {
+    background-color: rgba(255, 102, 0, 1); /* Nền đậm hơn khi hover */
+    transform: scale(1.1); /* Tăng kích thước nút khi hover */
+}
+
+.banner .banner-text .dots {
+    text-align: center;
+    position: absolute;
+    bottom: 20px; /* Đặt dots ở dưới cùng */
+    left: 50%;
+    transform: translateX(-50%); /* Giữa ngang */
+    list-style: none;
+    padding: 0;
+}
+
+.dots li {
+    display: inline-block;
+    width: 10px; /* Tăng kích thước dot */
+    height: 10px; /* Tăng kích thước dot */
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px; /* Tăng khoảng cách giữa các dot */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dots li.active {
+    background-color: #ff6600; /* Màu cho dot đang hoạt động */
+}
+
+.dots li:hover {
+    background-color: #e65500; /* Màu khi hover */
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------/*
+h1{
+    color:#555;
+}
+
+/* Toggle button for sidebar */
+.toggle-btn {
+    background: none;
+    border: none;
+    border: 2px solid #000000;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.toggle-btn-2{
+    display:none;
+}
+
+#topbarToggleBtn{
+    display:none;
+}
+/* Footer styles */
+.footer {
+    background-image:url(../img/fouter.png);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #000000;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.footer li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ff6600;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #e65500;
+} 
+
+
+.column-1{
+    padding-bottom: 2rem;
+}
+.column-1 .column-1-text{
+    width:50%;
+}
+.column-1 h1{
+    color:#555;
+}
+
+/*colunm 1*/
+.grid-container {
+    display: grid;
+    gap: 16px; /* Khoảng cách giữa các cột */
+    grid-template-columns: repeat(4, 1fr); /* Mặc định là 4 cột */
+  }
+  
+
+
+/* Hiệu ứng mượt và bóng cho các nút */
+.buttons .note,#avartar,
+.button button {
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.buttons .note:hover, 
+#avartar:hover,
+.button button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Submenu hiệu ứng */
+.submenu {
+    max-height: 0;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.submenu p{
+    display:none;
+}
+
+.submenu.open {
+    max-height: 300px; /* Chiều cao tối đa khi mở */
+    display: block;
+}
+.submenu-toggle .arrow {
+    transition: transform 0.3s;
+}
+.submenu-toggle.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* Bóng và hiệu ứng di chuột cho các khối */
+.grid-item {
+    
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    color:#000000;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 25px;
+    height:90px;
+    text-align: center;
+}
+
+#heo {
+    background-image: url(../img/heo.jpg);
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#ga{
+    background-image: url(../img/ga.jpg);
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#bo{
+    background-image: url(../img/bo.jpg);
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#ca{
+    background-image: url(../img/ca.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#trung{
+    background-image: url(../img/trung.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#canh{
+    background-image: url(../img/canh.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#trangmieng{
+    background-image: url(../img/trangmieng.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#tom{
+    background-image: url(../img/tom.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.grid-item::before {    
+    content: ''; /* Tạo lớp phủ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 244, 244, 0.4); /* Màu đen mờ (50% opacity) */
+    z-index: 2; /* Đặt lớp phủ trên hình nền */
+  }
+  
+  .grid-item {
+    position: relative;
+    z-index: 999; /* Đặt nội dung lên trên lớp phủ */
+    padding: 20px;
+  }
+
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Default styles for sidebar and main content */
+.sidebar {
+    width: 390px; /* Default width */
+    transition: width 0.3s; /* Smooth transition for width changes */
+}
+
+.main {
+    display: flex;
+    flex-direction: column; /* Đặt hướng của flexbox là cột */
+    height: 100vh; /* Đảm bảo chiếm toàn bộ chiều cao của viewport */
+}
+/* Responsive styles for tablets and smaller screens */
+/* CSS Responsive */
+@media (max-width: 400px) {
+    .container .top-bar .search {
+        width: 90%;
+    }
+    .top-bar input[type="text"] {
+        
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border 0.3s, box-shadow 0.3s;
+    }
+    .buttons{
+        width:auto;
+    }
+    .toggle {
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .toggle{
+        margin-right: 10%;
+    }
+    .banner-text {
+        height: 300px; /* Giảm chiều cao cho màn hình nhỏ */
+    }
+    .button button {
+        width: 30px;
+        height: 30px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ */
+    }
+    .button{
+        top: 30%;
+    }
+    .buttons-2 {
+        width: 100%;
+        display: flex
+    ;
+        justify-content: end;
+    }
+    .buttons-2 .note{
+        display:none;
+    }
+    
+    .dropdown-content {
+        display: none;
+        margin-top: 50px;
+        margin-left: -230px;
+        border-radius: 1rem;
+        position: absolute;
+        margin-right: 100px;
+        background-color: #fff;
+        min-width: 280px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        z-index: 1;
+    }
+    .top-bar input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border 0.3s, box-shadow 0.3s;
+    }
+    .menu .li-2{
+        display:block;
+    }
+    .dropdown-content {
+        display: none;
+        margin-top: 50px;
+        margin-left: -146px;
+        border-radius: 1rem;
+        position: absolute;
+        margin-right: 100px;
+        background-color: #fff;
+        min-width: 200px;
+        height: 240px;
+        z-index: 1;
+    }
+    .avartar-2 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 10px 15px 9px 15px;
+        cursor: pointer;
+    }
+    .avt-2 {
+        display: flex;
+        height: 2rem;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 2rem;
+        background-color: peru;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .avartar-2-text {
+        color: #555;
+        font-size: 15px;
+        height: 2rem;
+    }
+    .dropdown-content ul {
+        display: grid;
+        border-top: 0 solid #000000;
+        grid-gap: 5px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .dropdown-content li {
+        color: #555;
+        font-size: 15px;
+        display: flex;
+        padding: 14px 20px 5px 20px;
+        cursor: pointer;
+    }
+    .dropdown-content-end {
+        color: #555;
+        font-size: 15px;
+        display: flex;
+        padding: 5px 20px 5px 20px;
+        cursor: pointer;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        border-top: 1px solid #555;
+    }
+}
+
+@media (max-width: 768px) {
+    .toggle{
+        margin-right: 10%;
+    }
+    .sidebar {
+        width: 80px;
+        padding: 10px;
+    }
+    .top-bar input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border 0.3s, box-shadow 0.3s;
+    }
+    main.content {
+        padding: 10px;
+    }
+    .search{
+        width: 80%
+    }
+}
+
+/* Media query for screen widths below 864px */
+@media (max-width: 864px) {
+    main.content {
+      flex-grow: 1;
+      padding: 0 20px 20px 20px;
+      background-color: #f7f7f7;
+      height: 100%;
+    }
+    #toggleSidebar {
+      display: block; /* Show the toggle button */
+      position: absolute; /* Position it as needed */
+      top: 10px; /* Adjust top position */
+      left: 10px; /* Adjust left position */
+      z-index: 1002; /* Ensure it is above other elements */
+    }
+    #topbarToggleBtn {
+      display: block; /* Show the toggle button on the top bar */
+    }
+    #toggleBtn {
+      display: none; /* Hide the left toggle button */
+    }
+    .toggle {
+      margin-right: 5%;
+    }
+    .toggle-btn-2 {
+      display: block;
+    }
+    .sidebar {
+      position: fixed; /* Keep the sidebar fixed */
+      top: 0;
+      left: 0;
+      width: 250px; /* Set a suitable width for the sidebar */
+      height: 100vh; /* Full height */
+      z-index: 1001; /* Ensure it is above other elements */
+      background-color: #f1f1f1; /* Background color */
+      transition: transform 0.3s ease; /* Smooth transition */
+      transform: translateX(-100%); /* Initially hide the sidebar */
+    }
+  
+    .sidebar.open {
+      transform: translateX(0); /* Show sidebar when open */
+    }
+  
+    .sidebar.closed {
+      transform: translateX(-100%); /* Hide sidebar when closed */
+    }
+  
+    .sidebar-2 {
+      margin-top: 10%; /* Adjust position of logo and menu */
+    }
+    .top-bar {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      background: linear-gradient(90deg, #f8f8f8, #ffffff);
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #ddd;
+      position: sticky; /* Giữ nguyên */
+      top: 0; /* Đặt top là 0 */
+      width: 100%; /* Chiếm toàn bộ chiều rộng */
+      z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+      margin: 0; /* Đảm bảo không có margin */
+    }
+    .top-bar {
+        top: 0;
+        z-index: 1000; /* Keep it below the sidebar */
+      }
+.toggle-btn{
+    display: none;
+}
+    }
+    
